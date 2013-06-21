@@ -43,9 +43,9 @@ if($MOBILEPHONE){
 
 
 $dbhost='localhost';
-$dbuser='wgwh_mypagegps';
-$dbpass='trackm3!';
-$dbname='wgwh_mypagegps';
+$dbuser='root';
+$dbpass='';
+$dbname='egotrip';
 
 $db=mysql_connect($dbhost,$dbuser,$dbpass);
 mysql_select_db($dbname);
