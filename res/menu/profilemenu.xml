@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_profile_preferences"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Settings">
+    </item>
+    <item
+        android:id="@+id/menu_profile_tripinfo" 
+        android:icon="@drawable/ic_menu_info_details"
+        android:title="Trip Info">
+    </item>
+    <item
+        android:id="@+id/menu_email_profile_screenshot"
+        android:icon="@drawable/ic_menu_gallery"
+        android:title="Send Screenshot">
+    </item>
+</menu>

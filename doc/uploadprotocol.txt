@@ -1,0 +1,151 @@
+HTTP Protocol
+-------------
+
+All requests go to the same script. Required request attributes depend on the command (cmd=) attribute. cmd= is always required.
+
+Server Answer:
+-----------------
+"OK <something>" to indicate the operation was successful. <something> may depend on cmd=
+
+"NOK DEFER <optional human readable message>" to tell the client to back off for at least 30 secs (flood control)
+
+"NOK NOTSUPPORTED <optional human readable message>" the current operation is not supported by the server. the client should simply mark the operation as commited or try an alternative way (eg. image chunk upload -> standard image upload)
+
+"NOK INVALID <optional human readable message>" to tell the client this request sucks big time and it should not try it again 
+
+"NOK ERROR <optional human readable message>" for general errors (server script error)
+client should assume "NOK ERROR" for anything else
+
+Add a new location
+----------------
+cmd=addlocation
+lat=latitude, required
+lng=longtitude, required
+timestamp=unix timestamp when the point was recorded, required
+bearing=not required
+accuracy=accuracy in m, not required
+altitude=altitude in m, not required
+tripname=trip name, required
+installationid=<device installation id>, required
+tsorder=order id if a point with the same timestamp from this device already exists (optional, default 1)
+standalone=boolean, set to true if this point should be ignored when drawing paths
+hidden=keep track of the location, but don't display it (to debug broken locations)
+
+possible server answers and client action:
+OK <uuid> : unique id of this coord which the client may later reference for modifications, update serverid locally
+NOK DEFER : abort current upload operations, try later
+NOK NOTSUPPORTED (doesn't really make much sense to not support coord adds, but anyway, if that happens, just mark the point as commited and leave the server id NULL)
+NOK INVALID (this coordinate is severly broken, eg. out of bounds, missing important info, ...), mark as deleted and commited
+NOK ERROR : try again later
+ 
+
+Update a location
+---------------
+cmd=updatelocation
+locationid=<serverid of the location>, required
+
+all optional:
+lat=
+lng=
+timestamp=
+bearing=
+accuracy=
+altitude=
+tripname=
+installationid=
+tsorder=
+standalone=
+
+possible server answers and client action:
+
+OK <uid> : the server may choose to assign the modified coordinate a new uid, the client must update it locally. if uid is empty the client should assume that the uid stays the same
+NOK DEFER : abort current upload operations, try later
+NOK NOTSUPPORTED: server doesn't support coord updates, just mark as commited
+NOK INVALID (coord broken or not found on server), mark as deleted and commited
+NOK ERROR : try again later
+
+
+
+Delete a location
+-----------------
+cmd=deletelocation
+locationid=<serverid of the location>, required
+
+
+possible server answers and client action:
+
+OK deleted : location was removed, mark commited locally
+NOK DEFER : abort current upload operations, try later
+NOK NOTSUPPORTED: server doesn't support coord deletes, just mark as commited
+NOK INVALID : coord not found, mark as commited
+NOK ERROR : try again later
+
+
+Adding metadata
+---------------
+some servers may support adding metadata to locations:
+text ("tweet")
+image
+special icon for this location ("placemark")
+
+
+Generic form of attaching metadata:
+cmd=addmetadata
+locationid=<location id>
+mdatatype=<type of metadata>
+mdatacontent=<metadata content>
+installationid=
+
+possible server answers and client action:
+
+OK <mdataid> : metadata attached, this is the server id for this metadata, store locally for further reference
+NOK DEFER : abort current upload operations, try later
+NOK NOTSUPPORTED: server doesn't support attaching (this type of) metadata, mark as commited
+NOK INVALID (invalid metadata or point not found on server)... (what do we do in this case? remove the metadata locally or just live with it?)
+NOK ERROR : try again later
+
+
+Attach a text to a previously uploaded point
+cmd=addmetadata
+locationid=<locationid>
+mdatatype=text
+mdatacontent=url encoded text
+installationid=
+
+Attach a image to a previously uploaded point
+cmd=addmetadata
+locationid=<locationid>
+mdatatype=imagelink
+mdatacontent=<image identifier returned from the uploaded image> # todo, define image upload protocol which returns this image identifier
+installationid=
+
+Change the placemark icon
+cmd=addmetadata
+locationid=<locationid>
+mdatatype=icon
+mdatacontent=<icon identifier> # todo, define a list of valid types here. should be supported by google maps(placemarks) and openstreetmap!
+installationid=
+
+Delete medatada text/image from point
+cmd=deletemetadata
+locationid=<locationid>
+mdataid=<mdataid> or nothing to remove all metadata
+installationid=
+
+Uploading Images
+----------------
+multipart/form-data encoded!!!
+cmd=uploadfile
+uploadedfile=<binary rep>
+installationid=
+
+
+
+Test serverscript
+-----------------
+cmd=test
+installationid=
+
+both 'OK' and 'NOK NOTSUPPORTED' are treated as ok (the server script doesn't have to implement test, but it should return a valid answer)
+
+

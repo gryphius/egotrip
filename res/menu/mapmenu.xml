@@ -1,0 +1,100 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_map"
+        android:icon="@drawable/ic_menu_mapmode"
+        android:title="Map actions">
+        <menu>
+            <item
+                android:id="@+id/menu_add_placemark"
+                android:icon="@drawable/ic_menu_add"
+                android:title="Add placemark">
+            </item>
+            <item
+                android:id="@+id/menu_edit_map"
+                android:title="Edit map">
+            </item>
+            <!--
+             <item
+                android:id="@+id/menu_edit_hide"                
+                android:title="Auto hide...">
+            </item>
+
+            -->
+            <item
+                android:id="@+id/menu_move_first"
+                android:title="Move to first point">
+            </item>
+            <item
+                android:id="@+id/menu_move_last"
+                android:title="Move to last point">
+            </item>
+            <item
+                android:id="@+id/menu_satellite"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_mapmode"
+                android:title="Satellite view">
+            </item>
+            <!--
+            <item
+                android:id="@+id/menu_traffic"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_directions"
+                android:title="Traffic view">
+            </item>
+            <item
+                android:id="@+id/menu_gps_settings"
+                android:title="Android Gps settings">
+            </item>
+
+            -->
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_trip"
+        android:icon="@drawable/ic_menu_myplaces"
+        android:title="Trip actions">
+        <menu>
+            <item
+                android:id="@+id/menu_new_trip"
+                android:icon="@drawable/ic_menu_myplaces"
+                android:title="New trip">
+            </item>
+            <item
+                android:id="@+id/menu_open_trip"
+                android:icon="@drawable/ic_menu_archive"
+                android:title="Open trip">
+            </item>
+            <item
+                android:id="@+id/menu_rename_trip"
+                android:title="Rename trip">
+            </item>
+            <item
+                android:id="@+id/menu_split_trip"
+                android:icon="@drawable/ic_menu_archive"
+                android:title="Split trip">
+            </item>
+            <item
+                android:id="@+id/menu_delete_trip"
+                android:icon="@drawable/ic_menu_delete"
+                android:title="Delete trip">
+            </item>
+            <item
+                android:id="@+id/menu_viewtrail"
+                android:icon="@drawable/ic_menu_view"
+                android:title="View Trip online">
+            </item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_email_screenshot"
+        android:icon="@drawable/ic_menu_send"
+        android:title="Send Screenshot">
+    </item>
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Settings">
+    </item>
+
+</menu>

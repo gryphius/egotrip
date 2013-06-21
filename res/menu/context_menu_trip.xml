@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+        <menu  android:background="#55000000">                      
+             <item
+                android:id="@+id/menu_rename_trip"                
+                android:title="Rename trip">
+                
+            </item>   
+            <!--       
+            <item
+                android:id="@+id/menu_delete_trip"
+                android:icon="@drawable/ic_menu_delete"
+                android:title="Delete trip">
+            </item>
+            <item
+                android:id="@+id/menu_viewtrail"
+                android:icon="@drawable/ic_menu_view"
+                android:title="View Trip online">
+            </item>
+            -->
+        </menu>
+    
+</menu>

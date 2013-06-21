@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road"
+    android:orientation="vertical" >
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" >
+
+       
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#55000000"
+            android:shrinkColumns="1"
+            android:stretchColumns="1"
+            android:textColor="#FFFFFF" >
+
+            <TableRow>
+
+                <ImageButton
+                    android:layout_span="2"
+                    android:id="@+id/btnCToMapView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:onClick="openMap"
+                    android:src="@drawable/treasuremap" />
+
+                <ImageButton
+                    android:layout_span="2"
+                    android:id="@+id/btncToProfileview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:cropToPadding="true"
+                    android:onClick="openProfile"
+                    android:src="@drawable/chart" />
+            </TableRow>
+
+             <TableRow>
+
+                <View
+                    android:layout_span="5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#55FFFFFF" />
+            </TableRow>
+            
+            
+             <!-- Position Recorder Panel -->
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="GPS Recorder"
+                    android:textColor="#DDDD00"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnRecordStartStop"
+                    android:background="#00000000"
+                    android:onClick="btnPositionRecorderClicked"
+                    android:padding="3dip"
+                    android:src="@drawable/tracker_q" />
+
+                <TextView
+                    android:id="@+id/txt_gpsrunning"
+                    android:layout_span="3"
+                    android:padding="3dip"
+                    android:text="retrieving..."
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+           
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Location"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_span="3"
+                    android:padding="3dip"
+                    android:text="unavailable"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Last change"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_locationchange"
+                    android:layout_span="3"
+                    android:padding="3dip"
+                    android:text="never"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Manual Record"
+                    android:textColor="#FFFFFF" />
+
+                <ImageButton
+                    android:background="#00000000"
+                    android:onClick="forcelocationupdate"
+                    android:padding="3dip"
+                    android:src="@drawable/gpsfix"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            
+             <TableRow>
+
+                <View
+                    android:layout_span="5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#55FFFFFF" />
+            </TableRow>
+            
+            <!-- Uploader Panel -->
+			
+
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Uploader"
+                    android:textColor="#DDDD00"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/btnUploadStartStop"
+                    android:background="#00000000"
+                    android:onClick="btnUploaderClicked"
+                    android:padding="3dip"
+                    android:src="@drawable/signal_q" />
+
+                <TextView
+                    android:id="@+id/txt_uploaderrunning"
+                    android:layout_span="3"
+                    android:padding="3dip"
+                    android:text="retrieving..."
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Datatype"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Backlog"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Last upload"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Result"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Locations"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_uncommited"
+                    android:padding="3dip"
+                    android:text="0"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_lastcommit"
+                    android:padding="3dip"
+                    android:text="never"
+                    android:textColor="#FFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_uploadinfo"
+                    android:background="#00000000"
+                    android:padding="3dip"
+                    android:src="@drawable/flagblue" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Metadata"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_uncommited_metadata"
+                    android:padding="3dip"
+                    android:text="0"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_lastcommit_metadata"
+                    android:padding="3dip"
+                    android:text="never"
+                    android:textColor="#FFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_uploadinfo_metadata"
+                    android:background="#00000000"
+                    android:padding="3dip"
+                    android:src="@drawable/flagblue" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Images"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_uncommited_images"
+                    android:padding="3dip"
+                    android:text="0"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/txt_lastcommit_images"
+                    android:padding="3dip"
+                    android:text="never"
+                    android:textColor="#FFFFFF" />
+
+                <ImageButton
+                    android:id="@+id/btn_uploadinfo_images"
+                    android:background="#00000000"
+                    android:padding="3dip"
+                    android:src="@drawable/flagblue"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Test Server Script"
+                    android:textColor="#FFFFFF" />
+
+                <ImageButton
+                    android:background="#00000000"
+                    android:onClick="testupload"
+                    android:padding="3dip"
+                    android:src="@drawable/help" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</LinearLayout>

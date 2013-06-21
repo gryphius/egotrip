@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="no_help_available">
+      There is no help available at this time.
+    </string>
+    <string name="about_help_topics">
+      Help is available for each section of this app.
+    </string>
+
+    <string name="help_page_intro">For information on the different parts of this app, touch one of the images below.</string>
+    <string name="help_page_intro_html">
+    <![CDATA[
+      For information on the different parts of this app, touch one of the images below:
+       ]]>
+    </string>
+
+    <string name="help_title_section1">Recording</string>
+    <string name="help_text_section1">
+     How to record a trip
+    </string>
+    <string name="topic_section1">
+    <![CDATA[
+      <p>
+        You can turn on the recording either in the map view (first icon with the paw) or else in the summary view (by tapping the paw icon).
+        This will start to record a location at the invterval you defined in the settings. Note that if you don\'t have the GSP turned on, 
+        it will use the much less accurate network locations. 
+        </p>
+      <p>When you exit the application, if you like you can tell the app to keep recording locations. That way,
+      you can use your device in other ways while still tracking your location.
+       </p>
+      <p>
+      The locations are stored in a local db and are uploaded to a server of your choice if you like.
+       </p>
+       
+      <p><b>Return to the previous screen by touching the Back button.</b>
+        </p>
+      ]]>
+    </string>
+
+    <string name="help_title_section2">Uploading</string>
+    <string name="help_text_section2">
+         <![CDATA[
+     How to upload the data to a server
+       ]]>
+    
+    </string>
+    <string name="topic_section2">
+    <![CDATA[
+       <p>
+     If you like you can upload the locations to a server. Where and how to do it is completely up to you - we provide free sample
+     code on our sever on how to do it. By default it will be uploaded to our server.
+     On the server it is stored in a database, and you can look at it with any application, such as with php, Java or Vaadin.
+     </p>
+     To turn on uploading, tap the last icon on the map view (the icon with the signal tower), or tap the same icon in the summar view.
+     In settings you can decide how often and to where you wish to upload your locations. 
+     <p>
+     We provide free source code on how to do this with php, Vaadin (Web based Java framework) or with a Java servlet, 
+     with code on how to use it with google maps.
+     </p>
+      <p>
+        <a href="http://www.myegotrip.net">Egotrip web page</a>.
+      </p>
+     
+      <p><b>Return to the previous screen by touching the Back button.</b>
+        </p>
+       ]]>
+    </string>
+
+
+    <string name="help_title_section3">Managing trips</string>
+    <string name="help_text_section3">
+      What you can do with a trip
+    </string>
+    <string name="topic_section3">
+    <![CDATA[
+      <p> 
+     A trip is composed of locations, and each location can have an icon, an image and a text attached to it.
+     </p>    
+      <p>
+     To attach information to a location, open the Map and click on the edit icon (the second icon with the pen).
+     Then, tap any location and you will get a context sensitive menu. 
+     The menu also has options to move or delete a location and to split a trip.
+     If you ever wish to merge a trip, all you need to do is rename the current trip to the trip you wish to merge into ;-)
+      </p>
+   
+      <p>
+      <b>Return to the previous screen by touching the Back button.</b>
+        </p>
+       ]]>
+    </string>
+
+    <string name="help_title_section4">Your server</string>
+    <string name="help_text_section4">
+          <![CDATA[
+     How to set up a server
+     
+       ]]>
+    
+    </string>
+    <string name="topic_section4">
+    <![CDATA[
+      <p>
+     What you need to do to set up your own server
+      </p>
+      <p> 
+        <a href="http://www.myegotrip.net">Egotrip web page</a>.
+        </p>
+     
+      <p><b>Return to the previous screen by touching the Back button.</b>
+        </p>
+       ]]>
+    </string>
+
+</resources>

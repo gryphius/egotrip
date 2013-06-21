@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/application_preferences" >
+		<ListPreference android:title="@string/startup_view"
+			android:summary="@string/which_view_would_you_like_to_see_upon_startup_"
+			android:key="startup_view" android:defaultValue="@string/startup"
+			android:entries="@array/startup_view_val" android:entryValues="@array/startup_view_val"			
+			 />
+	</PreferenceCategory>	
+	
+    <PreferenceCategory android:title="@string/map_preferences" >
+		<CheckBoxPreference android:title="@string/move_map_to_latest_point" android:key="move_to_latest_point" 
+		    android:summary="@string/moves_the_view_to_the_latest_added_point_from_the_gps" android:defaultValue="true"/>
+		<EditTextPreference android:dialogTitle="@string/minimum_accuracy"
+			android:dialogMessage="EditTextMessage"
+			android:key="minimum_accuracy" android:title="@string/minimum_accuracy" android:summary="@string/hides_points_that_have_a_accuracy_less_than_that_in_m_"
+			android:defaultValue="500"
+		 />
+		<ListPreference android:title="Coloring mode for route"
+			android:summary="How should the route be colored?"
+			android:key="map_color_mode" android:defaultValue="SAME"
+			android:entries="@array/map_color_mode_str"
+			android:entryValues="@array/map_color_mode_val"			
+			 />
+		<EditTextPreference android:dialogTitle="@string/default_zoom"
+			android:dialogMessage="EditTextMessage"
+			android:key="zoom_level" android:title="@string/default_zoom" android:summary="@string/default_zoom_level"
+			android:defaultValue="12"
+			/>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/gps_recorder" >
+		<ListPreference android:title="@string/check_interval"
+			android:summary="@string/how_often_should_the_current_position_be_checked"
+			android:key="gps_check_interval" android:defaultValue="15"
+			android:entries="@array/gps_checkinterval_str" android:entryValues="@array/gps_checkinterval_val"
+			android:numeric="integer"
+			 />
+		
+		<ListPreference android:title="@string/minimum_distance"
+			android:summary="@string/minimum_distance_to_last_point_for_automatic_recording"
+			android:key="gps_min_distance" android:defaultValue="1000" android:numeric="integer"
+			android:entries="@array/gps_mindistance_str" android:entryValues="@array/gps_mindistance_val" />
+		<CheckBoxPreference android:title="@string/generate_mock_locations_for_testing" android:key="gps_mock_locations" 
+		    android:summary="@string/to_test_the_software_you_can_let_it_generate_mock_lockations" android:defaultValue="false"/>
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/web_upload">
+		<EditTextPreference android:dialogTitle="@string/upload_url"
+			android:dialogMessage="EditTextMessage"
+			android:key="upload_url" android:title="@string/upload_url" android:summary="@string/url_of_the_webform_where_the_gps_data_should_be_sent"
+			android:defaultValue="http://upload.myegotrip.net/upload/postcoord.php" />
+		
+		<EditTextPreference android:dialogTitle="@string/upload_image_url"
+			android:dialogMessage="EditTextMessage"
+			android:key="upload_image_url" android:title="@string/upload_image_url" android:summary="@string/url_of_the_webform_where_the_image_data_should_be_sent"
+			android:defaultValue="http://upload.myegotrip.net/upload/postcoord.php" />
+		<CheckBoxPreference android:title="@string/image_upload_wifi_only" android:key="upload_image_wifi_only" 
+		    android:summary="@string/image_upload_wifi_only" android:defaultValue="false"/>
+			
+		<EditTextPreference android:dialogTitle="@string/view_url"
+			android:dialogMessage="View URL"
+			android:key="view_url" android:title="@string/view_url" android:summary="@string/optional_url_of_the_webpage_where_your_trail_is_being_displayed"
+			android:defaultValue="http://myegotrip.net/show.php" />
+			
+		<PreferenceScreen android:title="@string/optional_custom_fields"
+		android:summary="@string/optional_custom_fields_to_send_to_your_webform_only_submitted_if_not_empty_"
+		
+		>
+			<EditTextPreference android:dialogTitle="@string/username"
+			android:dialogMessage="EditTextMessage"
+			android:key="custom_username" android:title="@string/username" android:summary="@string/if_your_application_requires_a_username_fill_it_in_here"
+			android:defaultValue="" />
+			<EditTextPreference android:dialogTitle="@string/password"
+			android:dialogMessage="EditTextMessage"
+			android:key="custom_password" android:title="@string/password" android:summary="@string/if_your_application_requires_a_password_fill_it_in_here"
+			android:defaultValue="" 
+			android:password="true"
+			/>
+			<EditTextPreference android:dialogTitle="@string/trip"
+			android:dialogMessage="EditTextMessage"
+			android:key="custom_trip" android:title="@string/trip_name" android:summary="@string/name_of_the_current_trip"
+			android:defaultValue="" />
+		</PreferenceScreen>
+	</PreferenceCategory>
+
+</PreferenceScreen>

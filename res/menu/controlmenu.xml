@@ -1,0 +1,53 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_settings"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Settings">
+    </item>
+    <item
+        android:id="@+id/menu_controlgps_settings" 
+        android:icon="@drawable/ic_menu_directions"     
+        android:title="Android Gps settings">
+    </item>
+    <!-- 
+    <item
+        android:id="@+id/menu_viewtrail"
+        android:icon="@drawable/ic_menu_view"
+        android:title="View trail online">
+    </item>   
+     -->
+    <item
+        android:id="@+id/menu_testuploadscript"
+        android:icon="@drawable/ic_menu_refresh"
+        android:title="Test Upload Script">
+    </item>
+    <!-- 
+    <item
+        android:id="@+id/menu_app"
+        android:icon="@drawable/ic_menu_info_details"
+        android:title="Debug">
+        <menu>
+            <item
+                android:id="@+id/menu_debug_control"
+                android:icon="@drawable/ic_menu_info_details"
+                android:title="Debug Control">
+            </item>
+            <item
+                android:id="@+id/menu_debug_gps"
+                android:icon="@drawable/ic_menu_info_details"
+                android:title="Debug GPS">
+            </item>
+            <item
+                android:id="@+id/menu_debug_uploader"
+                android:icon="@drawable/ic_menu_info_details"
+                android:title="Debug Uploader">
+            </item>
+            <item
+                android:id="@+id/menu_debug_db"
+                android:icon="@drawable/ic_menu_info_details"
+                android:title="Debug Db">
+            </item>
+        </menu>
+    </item>
+    -->
+</menu>

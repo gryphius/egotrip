@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menu_startup_preferences"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="Settings">
+    </item>
+     <item
+        android:id="@+id/menu_controlgps_settings" 
+        android:icon="@drawable/ic_menu_directions"     
+        android:title="Android Gps settings">
+    </item>
+    <item
+        android:id="@+id/menu_closecont"
+        android:icon="@drawable/ic_menu_back"
+        android:title="Close (keep recording)">
+    </item>
+    <item
+        android:id="@+id/menu_closestop"
+        android:icon="@drawable/ic_menu_close_clear_cancel"
+        android:title="Close (stop recording)">
+    </item>  
+    <item
+        android:id="@+id/menu_checkupdate"
+        android:icon="@drawable/ic_menu_refresh"
+        android:title="Check for update">
+    </item>
+   <item
+        android:id="@+id/menu_trip"
+        android:icon="@drawable/ic_menu_myplaces"       
+        android:title="Trip actions">
+        <menu>           
+            <item
+                android:id="@+id/menu_new_trip"
+                android:icon="@drawable/ic_menu_myplaces"
+                android:title="New trip">
+            </item>             
+             <item
+                android:id="@+id/menu_rename_trip"                
+                android:title="Rename trip">
+            </item>           
+          
+            <item
+                android:id="@+id/menu_viewtrail"
+                android:icon="@drawable/ic_menu_view"
+                android:title="View Trip online">
+            </item>
+        </menu>
+    </item>
+</menu>

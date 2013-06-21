@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <com.google.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="INSERT YOUR API KEY HERE!"
+        android:clickable="true"
+        android:enabled="true"
+        android:theme="@android:style/Theme.NoTitleBar" />
+
+    
+    <ImageButton
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:onClick="btnRecorderClicked"
+        android:src="@drawable/tracker_q" />
+    <ImageButton
+        android:id="@+id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnRecord"
+        android:cropToPadding="true"
+        android:onClick="editPath"
+        android:src="@drawable/document_edit" />
+    <ImageButton
+        android:id="@+id/btnProfileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnEdit"
+        android:cropToPadding="true"
+        android:onClick="profileView"
+        android:src="@drawable/chart" />
+    
+     <ImageButton
+        android:id="@+id/btnControlView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnProfileView"
+        android:cropToPadding="true"
+        android:onClick="btnControlView"
+        android:src="@drawable/gps" />
+
+     <ImageButton
+        android:id="@+id/btnForce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnEdit"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btnControlView"
+        android:cropToPadding="true"
+        android:onClick="forcelocationupdate"
+        android:src="@drawable/gpsfix" />
+     
+     
+    
+    <ImageButton
+        android:id="@+id/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnForce"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="right"
+        android:onClick="btnUploaderClicked"
+        android:src="@drawable/signal_q" />
+   
+</RelativeLayout>

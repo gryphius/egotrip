@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:debuggable="true"
+    android:icon="@drawable/ic_launcher"
+    package="net.myegotrip.egotrip"
+    android:versionCode="27"
+    android:versionName="pubbeta-27"
+    android:installLocation="auto"
+     >
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <!-- to send via email -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--  check wifi/net state  for image uploads and OSM tile downloads-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 
+    <application
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme"        
+        android:label="Ego Trip" >
+        <uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name=".MapViewActivity"
+            android:label="Ego Trip"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="net.myegotrip.egotrip.PrefActivity"
+            android:label="@string/settings" >
+        </activity>
+        <activity
+            android:name="net.myegotrip.egotrip.StartupActivity"
+            android:label="Ego Trip" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.myegotrip.egotrip.profile.ProfilePrefActivity"
+            android:label="Profile Settings" >
+        </activity>
+        <activity
+            android:name=".profile.ProfileActivity"
+            android:label="@string/profile" >
+        </activity>
+         <activity
+            android:name=".help.HelpActivity"
+            android:label="Help" >
+        </activity>
+         <activity
+            android:name=".help.TopicActivity"
+            android:label="HelpTopic" >
+        </activity>
+        <activity
+            android:name="net.myegotrip.egotrip.utils.DebugActivity"
+            android:label="@string/debug" >
+        </activity>
+        <activity
+            android:name="net.myegotrip.egotrip.ControlWindow"
+            android:label="@string/control"
+            android:launchMode="singleTask" >
+        </activity>
+        <service android:name="net.myegotrip.egotrip.GPSService" />
+    </application>
+</manifest>

@@ -1,0 +1,8 @@
+AndroidManifest.xml
+ * increase version
+ * set debuggable false (TODO: in recent releases this should maybe removed completely?)
+ 
+res/layout/map.xml 
+ * insert official api key
+ 
+run ant release

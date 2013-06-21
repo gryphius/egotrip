@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string-array name="gps_checkinterval_str">
+    <item>Permanent</item>
+	<item>Every Minute</item>
+	<item>Every 5 Minutes</item>
+	<item>Every 15 Minutes</item>
+	<item>Every 30 Minutes</item>
+	<item>Every Hour</item>
+</string-array>
+
+<string-array name="gps_checkinterval_val">
+    <item>0</item>
+	<item>1</item>
+	<item>5</item>
+	<item>15</item>
+	<item>30</item>
+	<item>60</item>
+</string-array>
+
+<string-array name="gps_mindistance_str">
+    <item>5m</item>
+	<item>10m</item>
+	<item>50m</item>
+	<item>100m</item>
+	<item>1km</item>
+	<item>5km</item>
+</string-array>
+
+<string-array name="gps_mindistance_val">
+	<item>5</item>
+	<item>10</item>
+	<item>50</item>
+	<item>100</item>
+	<item>1000</item>
+	<item>5000</item>
+</string-array>
+<string name="settings">Settings</string>
+<string name="mapview">Map View</string>
+<string name="control">Summary View</string>
+<string name="profile">Profile View</string>
+<string name="debug">Debug View</string>
+<string name="startup">Startup</string>
+
+<string-array name="startup_view_val">
+    <item>Startup</item>
+	<item>Map</item>
+	<item>Summary</item>
+	<item>Settings</item>
+</string-array>
+
+<string-array name="profile_x_axis_val">
+	<item>Time</item>
+	<item>Distance</item>	
+</string-array>
+
+<string-array name="map_color_mode_str">
+	<item>Same color for entire trip</item>
+	<item>Color by speed</item>
+	<item>Color altitude change</item>
+</string-array>
+	
+<string-array name="map_color_mode_val">
+	<item>SAME</item>
+	<item>SPEED</item>
+	<item>HEIGHT</item>
+</string-array>
+
+	<string name="tap_to_insert_a_route_point">Tap to insert a route point</string>
+	<string name="tap_the_map_to_add_a_marker_there">Tap the map to add a marker there</string>
+	<string name="tap_the_map_to_move_marker">Tap the map to move marker</string>
+	<string name="no_placemark_is_selected">No placemark is selected</string>
+	<string name="there_is_no_trip">There is no trip</string>
+	<string name="pick_the_first_point_of_the_new_trip">Pick the first point of the new trip</string>
+	<string name="new_name_of_trip">New name of trip</string>
+	<string name="you_can_turn_on_this_feature_right_away_if_you_upgrade_to_the_full_version">You can turn on this feature right away if you upgrade to the full version</string>
+	<string name="name_of_new_trip">Name of new trip</string>
+	<string name="are_you_sure_">Are you sure?</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="pick_a_trip">Pick a trip</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+	<string name="pick_an_icon">Pick an icon</string>
+	<string name="name_of_second_part_of_trip">Name of second part of trip</string>
+	<string name="i_found_no_route_point_to_split_the_trip">I found no route point to split the trip</string>
+	<string name="would_you_like_to_attach_an_image_from_the_camera_or_a_stored_image_">Would you like to attach an image from the camera or a stored image?</string>
+	<string name="camera">Camera</string>
+	<string name="pick_image">Pick image</string>
+	<string name="could_not_load_image_">"Could not load image "</string>
+	<string name="problem_reading_image_">"Problem reading image "</string>
+	<string name="could_not_get_uri_for_image">Could not get uri for image</string>
+	<string name="attached_image_to_">"Attached image to "</string>
+	<string name="got_no_image_for_some_reason">Got no image for some reason</string>
+	<string name="note">Note</string>
+	<string name="add_a_note_to_location_">"Add a note to location "</string>
+	<string name="name">Name</string>
+	<string name="added_new_placemark">Added new placemark</string>
+	<string name="i_see_no_current_placemark_won_t_move_it">I see no current placemark, won\'t move it</string>
+	<string name="location_of_">"Location of "</string>
+	<string name="_changed">" changed"</string>
+	<string name="your_gps_seems_to_be_disabled_do_you_want_to_enable_it_">Your GPS seems to be disabled, do you want to enable it?</string>
+	<string name="longitude_">"Longitude: "</string>
+	<string name="latitude_">"Latitude: "</string>
+	<string name="speed_">"Speed: "</string>
+	<string name="accuracy_">"Accuracy: "</string>
+	<string name="altitude_">"Altitude: "</string>
+	<string name="timestamp_">"Timestamp: "</string>
+	<string name="here_is_the_current_trip">Here is the current trip</string>
+	<string name="screenshot_of_egotrip">Screenshot of egotrip</string>
+	<string name="send">Send</string>
+	<string name="which_view_would_you_like_to_see_upon_startup_">Which view would you like to see upon startup?</string>
+	<string name="default_email_recipient_for_sending_screen_shots">Default email recipient for sending screen shots</string>
+	<string name="map_preferences">Map Preferences</string>
+	<string name="minimum_accuracy">Minimum accuracy</string>
+	<string name="startup_view">Startup View</string>
+	<string name="application_preferences">Application Preferences</string>
+	<string name="email_recipient">Email recipient</string>
+	<string name="default_email_address">recipient@example.com</string>
+	<string name="move_map_to_latest_point">Move map to latest point</string>
+	<string name="moves_the_view_to_the_latest_added_point_from_the_gps">Moves the view to the latest added point from the GPS</string>
+	<string name="hides_points_that_have_a_accuracy_less_than_that_in_m_">Hides points that have a accuracy less than that(in m)</string>
+	<string name="default_zoom">Default zoom</string>
+	<string name="default_zoom_level">Default zoom level</string>
+	<string name="gps_recorder">GPS Recorder</string>
+	<string name="check_interval">Check Interval</string>
+	<string name="how_often_should_the_current_position_be_checked">How often should the current position be checked</string>
+	<string name="minimum_distance">Minimum Distance</string>
+	<string name="minimum_distance_to_last_point_for_automatic_recording">minimum Distance to last point for automatic recording</string>
+	<string name="generate_mock_locations_for_testing">Generate Mock Locations for testing</string>
+	<string name="to_test_the_software_you_can_let_it_generate_mock_lockations">To test the software, you can let it generate mock lockations</string>
+	<string name="web_upload">Web Upload</string>
+	<string name="upload_url">Upload URL</string>
+	<string name="url_of_the_webform_where_the_gps_data_should_be_sent">URL of the webform where the gps data should be sent</string>
+	<string name="url_of_the_webform_where_the_image_data_should_be_sent">URL of the webform where the image data should be sent</string>
+	<string name="upload_image_url">Upload Image URL</string>
+	<string name="view_url">View URL</string>
+	<string name="optional_url_of_the_webpage_where_your_trail_is_being_displayed">Optional URL of the webpage where your trail is being displayed</string>
+	<string name="optional_custom_fields">Optional Custom Fields</string>
+	<string name="optional_custom_fields_to_send_to_your_webform_only_submitted_if_not_empty_">Optional/Custom fields to send to your webform. Only submitted if not empty.</string>
+	<string name="username">Username</string>
+	<string name="if_your_application_requires_a_username_fill_it_in_here">If your application requires a username, fill it in here</string>
+	<string name="password">Password</string>
+	<string name="if_your_application_requires_a_password_fill_it_in_here">If your application requires a password, fill it in here</string>
+	<string name="trip">Trip</string>
+	<string name="trip_name">Trip name</string>
+	<string name="name_of_the_current_trip">Name of the current trip</string>
+	<string name="image_upload_wifi_only">Upload Images only over WIFI Connection</string>
+	<string name="current_trip_">"Current trip: "</string>
+	<string name="summary">Summary</string>
+	<string name="help">Help</string>
+	<string name="detailed_help_for_that_topic_is_not_available_">Detailed Help for that topic is not available.</string>
+	<string name="no_information_is_available_for_topic_">"No information is available for topic: "</string>
+</resources>

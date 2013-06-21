@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+                android:id="@+id/menu_satellite"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_mapmode"
+                android:title="Satellite view">
+            </item>
+            <item
+                android:id="@+id/menu_traffic"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_directions"
+                android:title="Traffic view">
+            </item>
+            <item
+                android:id="@+id/menu_add_placemark"
+                android:icon="@drawable/ic_menu_add"
+                android:title="Add placemark">
+            </item>
+            <item
+                android:id="@+id/menu_new_trip"
+                android:icon="@drawable/ic_menu_myplaces"
+                android:title="New trip">
+            </item>
+             <item
+                android:id="@+id/menu_rename_trip"                
+                android:title="Rename trip">
+            </item>           
+            <item
+                android:id="@+id/menu_delete_trip"
+                android:icon="@drawable/ic_menu_delete"
+                android:title="Delete trip">
+            </item>
+</menu>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@drawable/beach"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="does nothing"/>
+     
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/btnClear">
+
+        <TextView
+            android:id="@+id/txtDebug"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="txtDebug"/>
+
+    </ScrollView>
+
+</RelativeLayout>

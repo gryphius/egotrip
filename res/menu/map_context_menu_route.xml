@@ -1,0 +1,51 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+     <item
+        android:id="@+id/menu_show_marker_info"
+        android:title="Show info">
+    </item> 
+     <item
+        android:id="@+id/menu_icon"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Change icon">
+    </item>
+     <item 
+        android:id="@+id/menu_move"
+        android:icon="@drawable/ic_menu_goto"
+        android:title="Move point">
+    </item>
+    <item
+        android:id="@+id/menu_note"
+        android:icon="@drawable/ic_menu_edit"
+        android:title="Add note">
+    </item>
+    <item
+        android:id="@+id/menu_add_image"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Add image">
+    </item>
+   
+   
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/ic_menu_close_clear_cancel"
+        android:title="Delete point">
+    </item>
+   
+    <item
+        android:id="@+id/menu_show_image"
+        android:title="Show image">
+    </item>
+    <item
+        android:id="@+id/menu_insert_before"
+        android:title="Insert point">
+    </item>
+    <item
+        android:id="@+id/menu_remove_image"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Remove image">
+    </item>
+    <item
+        android:id="@+id/menu_rename_marker"
+        android:title="Rename marker">
+    </item>
+</menu>

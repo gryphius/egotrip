@@ -1,0 +1,29 @@
+-- server side db schema
+
+CREATE TABLE `gpsdata` (
+  `id` bigint NOT NULL auto_increment,
+  `installationid` varchar(255) NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `lat` float NOT NULL,
+  `lng` float NOT NULL,
+  `ts` bigint default NULL,
+  `tsorder` int default 0,
+  `bearing` float default NULL,
+  `speed` float default NULL,
+  `tripname` varchar(255) default NULL,
+  `altitude` float default NULL,
+  `accuracy` float default NULL,
+  `instime` timestamp default NOW(),
+  `modtime` timestamp,
+  `hidden` tinyint(1) not null default 0,
+  `standalone` tinyint(1) not null default 0,
+   
+   `icontype` varchar(255) NULL,
+   `imagelink` varchar(255) NULL,
+   `textmessage` text NULL,
+  
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Profile Preferences" >
+		
+		<EditTextPreference android:dialogTitle="Minimum distance (m)"
+			android:dialogMessage="EditTextMessage"
+			android:key="minimum_distance"
+			android:title="Minimum distance (m)" 
+			android:summary="Does not add points closer than x meters other points (unless they have an image or custom icon)"
+			android:defaultValue="1"
+		 />
+		<EditTextPreference android:dialogTitle="Minimum time differencee (s)"
+			android:dialogMessage="EditTextMessage"
+			android:key="minimum_time"
+			android:title="Minimum time difference (s)" 
+			android:summary="Does not add points closer than x seconds other points (unless they have an image or custom icon)"
+			android:defaultValue="1"
+		 />
+		
+		<ListPreference android:title="Unit for x axis"
+			android:summary="What unit should the X axis be?"
+			android:key="profile_x_axis" android:defaultValue="DISTANCE"
+			android:entries="@array/profile_x_axis_val"
+			android:entryValues="@array/profile_x_axis_val"			
+			 />
+				
+		
+		<EditTextPreference android:dialogTitle="Maximum icon probability"
+			android:dialogMessage="EditTextMessage"
+			android:key="max_sheep" android:title="Max sheep/tree probability" android:summary="Adds icons randomly :-) (0=never, 1=always)"
+			android:defaultValue="0.7"
+		 />
+		
+	</PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+   
+    
+     <item
+        android:id="@+id/menu_show_note"        
+        android:title="Show info">
+    </item>
+     
+   
+    <item
+        android:id="@+id/menu_prof_show_image"
+        android:title="Show image">
+    </item>
+   
+   
+   
+</menu>
