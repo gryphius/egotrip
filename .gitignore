@@ -48,3 +48,5 @@ local.properties
 #do not commit keys & deploy info
 release/
 make-release.sh
+
+*~
