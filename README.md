@@ -1,4 +1,4 @@
-**!! Note !!** This project has been dead for a while. It may still work, but it the application uses a very old google maps and location API which may not be compatible with current phones
+**!! Note !!** This project has been dead for a while. It may still work, but the app uses a very old google maps and location API which may not be compatible with current phones
 
 GPS Tracking they way YOU decide
 ================================
