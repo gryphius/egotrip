@@ -1,3 +1,5 @@
+**!! Note !!** This project has been dead for a while. It may still work, but it the application uses a very old google maps and location API which may not be compatible with current phones
+
 GPS Tracking they way YOU decide
 ================================
 
@@ -7,26 +9,11 @@ Egotrip is an android application for tracking your gps location and instantly u
 Features
 ========
 
-
  *  Records your current position in configurable intervals
  *  Instant upload (can be disabled to save bandwidth)
  *  attach text and images to your locations
  *  View and edit current trip on map
  *  Profile View
-
-Please visit http://www.myegotrip.net/ for more details and screenshots
-
-APK Download
-============
-
-https://play.google.com/store/apps/details?id=net.myegotrip.egotrip
-
-
-Build Instructions
-==================
-
- * google maps api key in res/layout/map.xml (TODO - app was built with maps api v1 but apparently you can no longer get api keys?)
- 
 
 Developer Info & Tools
 ======================
